@@ -1,28 +1,27 @@
 import React from "react";
 import { Card, CardContent, Typography, Button, Grid } from "@mui/material";
 import Image from "next/image";
-import user1 from "../../../assets/images/backgrounds/u5.jpeg";
-import user2 from "../../../assets/images/backgrounds/u6.jpeg";
-import user3 from "../../../assets/images/backgrounds/u7.jpeg";
+import contact from '../../../public/contact.png'
+import hero from '../../../public/hero.png'
 
 const blogs = [
   {
-    img: user1,
-    title: "Zain-Ul-Abdin Admin",
+    img: contact,
+    title: "Anderson",
     subtitle:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     btncolor: "error",
   },
   {
-    img: user2,
-    title: "Raffay Akmal Admin",
+    img: hero,
+    title: "Develpoed by Zain",
     subtitle:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     btncolor: "warning",
   },
   {
-    img: user3,
-    title: "Faisal Mansoor",
+    img: contact,
+    title: "Dummy text",
     subtitle:
       "Some quick example text to build on the card title and make up the bulk of the card's content.",
     btncolor: "primary",
@@ -49,7 +48,7 @@ const BlogCard = () => {
               width: "100%",
             }}
           >
-            <Image height={500} src={blog.img} alt="img" />
+            <Image height={150} width={300} src={blog.img} alt="img" />
             <CardContent
               sx={{
                 paddingLeft: "30px",

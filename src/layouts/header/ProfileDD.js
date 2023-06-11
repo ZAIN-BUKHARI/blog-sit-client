@@ -1,8 +1,9 @@
+// 'use client'
 import React from "react";
 import FeatherIcon from "feather-icons-react";
 import Image from "next/image";
-import userimg from "../../../assets/images/users/user2.jpg";
-import { useRouter } from 'next/router'
+import hero from "../../../public/hero.png";
+import { useRouter } from 'next/navigation'
 import {
   Box,
   Menu,
@@ -41,9 +42,9 @@ const ProfileDD = () => {
       >
         <Box display="flex" alignItems="center">
           <img
-            // src={userimg}
-            src='/zwearlogo.png'
-            alt="Zainy'sWear"
+            // src={hero}
+            src='/hero.png'
+            alt="Blogger"
             width="30"
             height="30"
             className="roundedCircle"
@@ -102,7 +103,9 @@ const ProfileDD = () => {
           <Divider />
           <Box p={2}>
             <Link to="/">
-              <Button onClick={logout} fullWidth variant="contained" color="primary">
+              <Button
+               onClick={logout} 
+               fullWidth variant="contained" color="primary">
                 Logout
               </Button>
             </Link>

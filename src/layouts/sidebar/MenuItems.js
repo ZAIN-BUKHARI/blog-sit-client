@@ -2,53 +2,53 @@ const Menuitems = [
   {
     title: "Dashbaord",
     icon: "home",
-    href: "/admin",
+    href: "/dashboard/admin",
   },
   {
-    title: "Add Products",
+    title: "Post blog",
     icon: "plus-circle",
-    href: "/adminadd",
+    href: "/dashboard/admin/add",
   },
   {
-    title: "View Products",
+    title: "View Blogs",
     icon: "eye",
-    href: "/adminproducts",
+    href: "/dashboard/admin/view",
   },
-  {
-    title: "Orders",
-    icon: "box",
-    href: "/adminorders",
-  },
-  {
-    title: "Sales",
-    icon: "user",
-    href: "/adminsales",
-  },
+  // {
+  //   title: "Orders",
+  //   icon: "box",
+  //   href: "/adminorders",
+  // },
+  // {
+  //   title: "Sales",
+  //   icon: "user",
+  //   href: "/adminsales",
+  // },
   {
     title: "Search",
     icon: "star",
-    href: "/admincustom",
+    href: "/search",
   },
   {
-    title: "Marked",
+    title: "Delete",
     icon: "grid",
-    href: "/adminmarked",
+    href: "/dashboard/admin/delete",
   },
-  {
-    title: "Delivered",
-    icon: "image",
-    href: "/adminpayment",
-  },
-  {
-    title: "Cancel",
-    icon: "star",
-    href: "/admincancel",
-  },
+  // {
+  //   title: "Delivered",
+  //   icon: "image",
+  //   href: "/adminpayment",
+  // },
+  // {
+  //   title: "Cancel",
+  //   icon: "star",
+  //   href: "/admincancel",
+  // },
   
   {
     title: "Update",
-    icon: "grid",
-    href: "/update",
+    icon: "image",
+    href: "/dashboard/admin/update",
   },
   
 ];
