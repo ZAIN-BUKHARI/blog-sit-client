@@ -1,14 +1,23 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Hero from "public/hero.png";
 import Signleblog from "@/components/singleblog/Signleblog";
-import Feature from "@/components/feature/Feature";
+import Feature from '../components/feature/Feature'
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/blog", {
+    cache: "no-store",
+  });
 
-export default function Home() {
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
+  const blogs = await getData()
   return (
     <>
-    <Feature></Feature>
-    <Signleblog/>
+    <Feature blogs={blogs} />
+    <Signleblog blogs={blogs}/>
     </>
   );
 }

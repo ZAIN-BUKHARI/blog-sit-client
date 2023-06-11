@@ -1,0 +1,55 @@
+const mongoose = require('mongoose')
+const { Schema } = mongoose;
+
+const BlogSchema = new Schema({
+    slug:
+    {
+        type:String,
+        required:true,
+        trim:true,
+    },
+    title:
+    {
+        type:String,
+        required:true,
+        trim:true,
+    },
+    category:
+    {
+        type:String,
+        required:true,
+        trim:true,
+    },
+    img:
+    {
+        type:String,
+        required:true,
+        trim:true,
+    },
+    desc:
+    {
+        type:String,
+        required:true,
+        trim:true,
+    },
+    author:
+    {
+        type:String,
+        required:true,
+        trim:true,
+    },
+    Feature:
+    {
+        type:String,
+        trim:true,
+    },
+    
+    
+  
+    
+
+    },{timestamps:true})
+    mongoose.models={}
+
+export default mongoose.model('Blog',BlogSchema) 
+
