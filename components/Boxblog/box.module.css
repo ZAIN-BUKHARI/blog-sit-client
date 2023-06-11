@@ -10,11 +10,17 @@
   height: 250px;
   width: 2500px;
 }
+.image:hover{
+  padding: 5px;
+  transition: ease-in-out;
+  transition: 0.2s;
+}
 
 
 
 .title{
   margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .desc{

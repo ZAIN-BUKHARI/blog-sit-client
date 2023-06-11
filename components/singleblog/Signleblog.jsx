@@ -1,6 +1,13 @@
+'use client'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 
 const Signleblog = ({blogs}) => {
+  const router = useRouter()
+  const push = (slug)=>{
+    router.push(`/blog/`+slug)
+
+  }
   return (
     <section class="text-gray-600 body-font">
     <div class="container px-5 py-16 mx-auto">
@@ -14,8 +21,8 @@ const Signleblog = ({blogs}) => {
 
         { blogs && blogs.map((item)=>(
            <div class="p-4 lg:w-1/3 md:w-1/2">
-           <div class="h-full flex flex-col items-center text-center">
-             <img alt="team" class="flex-shrink-0 rounded-lg w-full h-[300px] object-cover object-center mb-4" src={item.img}/>
+           <div onClick={()=>{push(item.slug)}} class="h-full flex flex-col items-center text-center">
+             <img alt="team" class="flex-shrink-0 trans rounded-lg w-full h-[300px] object-cover object-center mb-4" src={item.img}/>
              <div class="w-full">
                <h2 class="title-font font-medium text-lg text-gray-900">{item.author}</h2>
                <h3 class="text-gray-500 mb-3">{item.category}</h3>

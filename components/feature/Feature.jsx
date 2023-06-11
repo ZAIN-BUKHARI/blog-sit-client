@@ -1,6 +1,13 @@
+'use client'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 
 const Feature = ({blogs}) => {
+  const router = useRouter()
+  const push = (slug)=>{
+    router.push(`/blog/`+slug)
+
+  }
   return (
     <>
      <section class="text-gray-600 body-font">
@@ -14,10 +21,13 @@ const Feature = ({blogs}) => {
         { blogs && blogs.slice(0,2).map((item)=>(
       <div class="p-4 lg:w-1/2 md:w-1/2">
         
-        <div class="h-full flex flex-col items-center text-center">
-          <img alt="team" class="flex-shrink-0 rounded-lg w-full h-[300px] object-cover object-center mb-4" src={item.img}/>
+        {/* <Link href={`/blog/${item.slug}`}> */}
+        <div onClick={()=>{push(item.slug)}}  class="h-full flex flex-col items-center text-center">
+          <img alt="team" class=" trans flex-shrink-0 rounded-lg w-full h-[300px] object-cover object-center mb-4" src={item.img}/>
           <div class="w-full">
-            <h2 class="title-font font-medium text-lg text-gray-900">{item.author}</h2>
+            
+            <h2 class="title-font font-medium text-lg text-gray-900">
+              {item.author}</h2>
             <h3 class="text-gray-500 mb-3">{item.category}</h3>
             <p class="mb-4">{item.desc.slice(0,73)}</p>
             <span class="inline-flex">
@@ -39,6 +49,7 @@ const Feature = ({blogs}) => {
             </span>
           </div>
         </div>
+        {/* </Link> */}
       </div>
         ))}
      
