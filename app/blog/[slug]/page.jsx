@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import Container from "../../../slugcomp/container";
-import one from '../../../public/one.jpeg'
 
 
 // import CategoryLabel from "../../slugcomp/category";

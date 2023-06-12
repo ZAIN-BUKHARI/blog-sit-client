@@ -1,5 +1,5 @@
 
-import Box from '@/components/BoxBlog/Box'
+import Box from '../../components/Boxblog/Box'
 import React from 'react'
 
 async function getData() {
