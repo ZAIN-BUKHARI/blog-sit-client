@@ -7,7 +7,7 @@ const Footer = () => {
       <Typography>
         © 2022 All rights reserved by{" "}
         <Link href="/" className="text-pink-500" >
-          zainyswear.com
+          Developed by Zain-ul-Abdin
         </Link>
       </Typography>
     </Box>

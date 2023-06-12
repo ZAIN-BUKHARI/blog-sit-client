@@ -2,6 +2,7 @@
 import { NextResponse } from "next/server";
 import connect from "../../../middleware/mongoose";
 import Admin from "../../../models/Admin";
+const jwt = require('jsonwebtoken');
 
 //login
 export const POST = async (request) => {
@@ -13,7 +14,8 @@ export const POST = async (request) => {
     await connect();
     if(user){
           if(user[0].password==body.password){
-            return new NextResponse(JSON.stringify(user), { status: 201 });
+            const token = jwt.sign({id:user._id}, 'client-1');
+            return new NextResponse(JSON.stringify(token), { status: 201 });
           }
           else{
             return new NextResponse('Invalid Credentials', { status: 500 });

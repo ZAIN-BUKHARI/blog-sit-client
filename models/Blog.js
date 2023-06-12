@@ -7,6 +7,7 @@ const BlogSchema = new Schema({
         type:String,
         required:true,
         trim:true,
+        unique:true
     },
     title:
     {
@@ -39,6 +40,11 @@ const BlogSchema = new Schema({
         trim:true,
     },
     Feature:
+    {
+        type:String,
+        trim:true,
+    },
+    date:
     {
         type:String,
         trim:true,

@@ -6,12 +6,21 @@ import SalesOverview from "../../../src/components/dashboard/SalesOverview";
 // import ProductPerfomance from "../../../src/components/dashboard/ProductPerfomance";
 import FullLayout from "../../../src/layouts/FullLayout";
 import theme from "../../../src/theme/theme";
+import React,{useEffect} from 'react'
+import { useRouter } from "next/navigation";
 
 
 
 
 
 export default function Index() {
+  const router =useRouter()
+  useEffect(()=>{
+    if(!localStorage.getItem('token')){
+      router.push('/dashboard')
+    }
+  },[])
+
   return (
     
     <ThemeProvider theme={theme}>

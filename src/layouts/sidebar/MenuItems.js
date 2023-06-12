@@ -9,11 +9,11 @@ const Menuitems = [
     icon: "plus-circle",
     href: "/dashboard/admin/add",
   },
-  {
-    title: "View Blogs",
-    icon: "eye",
-    href: "/dashboard/admin/view",
-  },
+  // {
+  //   title: "View Blogs",
+  //   icon: "eye",
+  //   href: "/dashboard/admin/view",
+  // },
   // {
   //   title: "Orders",
   //   icon: "box",
@@ -27,7 +27,7 @@ const Menuitems = [
   {
     title: "Search",
     icon: "star",
-    href: "/search",
+    href: "/dashboard/admin/search",
   },
   {
     title: "Delete",
