@@ -16,40 +16,40 @@ import {
 "@mui/material";
 import BaseCard from "../../../../src/components/baseCard/BaseCard";
 import Snack from '@/components/Snackbar/Snack';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+// import ReactQuill from 'react-quill';
+// import 'react-quill/dist/quill.snow.css';
 import axios from 'axios';
 
-const modules = {
-  toolbar:[
-    [{header:[1,2,3,4,5,6,false]}],
-    [{font:[]}],
-    [{size:[]}],
-    ["bold","italic","underline","strike","blackquote"],
-    [
-      {list:"ordered"},
-      {list:"bullet"},
-      {indent:"-1"},
-      {indent:"+1"},
-    ],
-    ["link","image","video"],
-  ],
-}
-const formats=[
-  "header",
-  "font",
-  "size",
-  "bold",
-  "italic",
-  "underline",
-  "strike",
-  "blockquote",
-  "list",
-  "bullet",
-  "link",
-  "image",
-  "video"
-]
+// const modules = {
+//   toolbar:[
+//     [{header:[1,2,3,4,5,6,false]}],
+//     [{font:[]}],
+//     [{size:[]}],
+//     ["bold","italic","underline","strike","blackquote"],
+//     [
+//       {list:"ordered"},
+//       {list:"bullet"},
+//       {indent:"-1"},
+//       {indent:"+1"},
+//     ],
+//     ["link","image","video"],
+//   ],
+// }
+// const formats=[
+//   "header",
+//   "font",
+//   "size",
+//   "bold",
+//   "italic",
+//   "underline",
+//   "strike",
+//   "blockquote",
+//   "list",
+//   "bullet",
+//   "link",
+//   "image",
+//   "video"
+// ]
 
 
 
@@ -84,9 +84,9 @@ const add = () => {
       else if(e.target.name=='title'){
         settitle(e.target.value)
       }
-      // else if(e.target.name=='desc'){
-      //   setdesc(e.target.value)
-      // }
+      else if(e.target.name=='desc'){
+        setdesc(e.target.value)
+      }
       else if(e.target.name=='img'){
         setimg(e.target.value)
       }
@@ -174,7 +174,7 @@ const add = () => {
             <TextField onChange={handleChange} value={slug}  name="slug" label="Slug" variant="outlined"  />
             <TextField onChange={handleChange} value={title} name="title" label="Title" variant="outlined" />
             <TextField onChange={handleChange} value={category} type='text' name="category" label="Category" variant="outlined" />
-            {/* <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} />  */}
+            <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
             <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
             <TextField onChange={handleChange} value={img} name="img" type='text' label="Image link " variant="outlined"  />
             <TextField onChange={handleChange} value={date} name="date" type='date' label="" variant="outlined"  />
@@ -199,12 +199,12 @@ const add = () => {
                    <option value={'Yes'}>Yes</option>
                    <option value={'NO'}>No</option>
             </select>
-            <ReactQuill 
+            {/* <ReactQuill 
             modules={modules}
             formats={formats}
             theme="snow" value={desc}  onChange={setdesc}
             className='h'
-            ></ReactQuill>
+            ></ReactQuill> */}
             
           
             
