@@ -205,7 +205,6 @@ const add = () => {
             theme="snow" value={desc}  onChange={setdesc}
             className='h'
             ></ReactQuill>
-            <pre>{desc}</pre>
             
           
             
