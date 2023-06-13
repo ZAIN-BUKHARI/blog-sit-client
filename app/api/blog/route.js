@@ -36,13 +36,3 @@ export const GET = async (request) => {
 };
 
 
-// Blog-01-bussiness2
-
-// { 
-//   "slug":"Blog-01-bussiness",
-//   "title":"Lorem, ipsugfm dolor sit amet consectetur adipisicing elit. Incidunt, laborum aliquid minima repellendus culpa suscipit modi.",
-//   "category":"shopping",
-//   "img":"https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&w=400",
-//   "desc":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, laborum aliquid minima repellendus culpa suscipit modi. Tenetur, ut libero repudiandae id facere fuga illo labore exercitatcxcionem, iste, possimus cum ratione!Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, laborum aliquid minima repellendus culpa suscipit modi. Tenetur, ut libero repudiandae id facere fuga illo labore exercitationem, iste, possimus cum ratione!",
-//   "author":"Ali"
-// }

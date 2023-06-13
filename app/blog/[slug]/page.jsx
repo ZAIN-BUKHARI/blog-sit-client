@@ -28,19 +28,19 @@ import axios from 'axios'
 // }
 
 const Post=async ({params})=> {
-  const [userPrompt, setUserPrompt] = useState([]);
+  // const [userPrompt, setUserPrompt] = useState([]);
 
-  useEffect(() => {
-    const fetchPrompts = async () => {
-      const response = await fetch(`/api/searchslug/${params.id}`);
-      const data = await response.json();
+  // useEffect(() => {
+  //   const fetchPrompts = async () => {
+  //     const response = await fetch(`/api/searchslug/${params.id}`);
+  //     const data = await response.json();
 
-      setUserPrompt(data);
-    };
+  //     setUserPrompt(data);
+  //   };
 
-    if (userPrompt=='') fetchPrompts();
-  }, []);
-  console.log(userPrompt)
+  //   if (userPrompt=='') fetchPrompts();
+  // }, []);
+  // console.log(userPrompt)
   // const data = await getData(params.slug)
   // console.log(data)
   // const[slug,setslug]=useState('')
@@ -64,7 +64,7 @@ const Post=async ({params})=> {
 
   return (
     <>
-    hello
+    <h1>test</h1>
         {/* <div className="mx-auto max-w-screen-md ">
           <div className="flex justify-center">
             <h2 className="font-serif text-gray-800 text-2xl">{data.category}</h2>

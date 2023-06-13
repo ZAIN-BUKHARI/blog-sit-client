@@ -21,7 +21,7 @@ const Signleblog = ({blogs}) => {
 
         { blogs && blogs.map((item)=>(
            <div class="p-4   md:w-1/3 ">
-           <div onClick={()=>{push(item.slug)}} class="h-full  flex flex-col items-center text-center">
+           <div onClick={()=>{push(item.slug)}} class="h-full cursor-pointer  flex flex-col items-center text-center">
              <img alt="team" class="flex-shrink-0 trans rounded-lg w-full md:h-[300px] h-[200px]  object-cover object-center mb-4" src={item.img}/>
              <div class="w-full">
                <h2 class="title-font font-medium text-lg text-gray-900">{item.author}</h2>
