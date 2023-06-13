@@ -1,6 +1,6 @@
 'use client'
 import React,{useEffect} from 'react'
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import FullLayout from "../../../../src/layouts/FullLayout";
 import theme from "../../../../src/theme/theme";
 import { ThemeProvider } from "@mui/material/styles";
@@ -22,10 +22,10 @@ import Snack from '@/components/Snackbar/Snack';
 
 
 const del = () => {
-  const router=useRouter()
+  // const router=useRouter()
   useEffect(()=>{
     if(!localStorage.getItem('token')){
-      router.push('/dashboard')
+      // router.push('/dashboard')
     }
   },[])
   

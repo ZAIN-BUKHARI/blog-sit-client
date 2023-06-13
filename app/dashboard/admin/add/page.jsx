@@ -6,7 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import {useState }from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import {
   Grid,
   Stack,
@@ -56,7 +56,7 @@ import axios from 'axios';
 
 
 const add = () => {
-  const router=useRouter()
+  // const router=useRouter()
   const [slug, setslug] = useState('')
   const [title, settitle] = useState('')
   const [desc, setdesc] = useState('')
@@ -70,7 +70,7 @@ const add = () => {
  
   useEffect(()=>{
     if(!localStorage.getItem('token')){
-      router.push('/dashboard')
+      // router.push('/dashboard')
     }
   },[])
 
@@ -112,7 +112,6 @@ const add = () => {
         if( slug!='' && title!='' && desc!='' && category!=''&& author!='',date!='',img!=''  && Feature!='' && month!=''){
         const data = {slug,title,img,desc,category,Feature,author,date}
     let a = await axios.post('/api/blog',data)
-    console.log(a)
     if(a.data==true){
        toast.success('Successfully Blog Post!', {
         position: "bottom-center",

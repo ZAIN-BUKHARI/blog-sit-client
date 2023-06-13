@@ -8,7 +8,7 @@ import {
     Button,
   } from "@mui/material";
   import BaseCard from "../../src/components/baseCard/BaseCard";
-  import { useRouter } from 'next/navigation';
+  // import { useRouter } from 'next/navigation';
 import Snack from '../Snackbar/Snack';
 
 
@@ -25,7 +25,7 @@ const Update = ({
     date:existdate
 }) => {
      // UPDATE PRODUCT SYSTEM HERE 
-     const router = useRouter()
+    //  const router = useRouter()
     const [id, setid] = useState(existid||'')
     const [slug, setslug] = useState(existslug||'')
     const [title, settitle] = useState(existtitle||'')
@@ -86,7 +86,7 @@ const Update = ({
     let a = await response.json()
     console.log(a)
     if(a==true){
-       router.push('/dashboard/admin/update')
+      //  router.push('/dashboard/admin/update')
        toast.success('Successfully Blog updated!', {
         position: "bottom-center",
         autoClose: 2000,

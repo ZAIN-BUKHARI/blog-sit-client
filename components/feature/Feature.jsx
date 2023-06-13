@@ -18,7 +18,7 @@ const Feature = ({blogs}) => {
 
         {/* 1 */}
         { blogs && blogs.slice(0,2).map((item)=>(
-      <div class="p-4 lg:w-1/2 md:w-1/2">
+      <div key={item._id} class="p-4 lg:w-1/2 md:w-1/2">
         
         {/* <Link href={`/blog/${item.slug}`}> */}
         <div onClick={()=>{push(item.slug)}}  class="h-full cursor-pointer  flex flex-col items-center text-center">

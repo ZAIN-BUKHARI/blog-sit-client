@@ -7,8 +7,8 @@ const Blog = ({blogs}) => {
     <>
     <div className={styles.mainContainer}>
       {blogs.length>0 &&blogs.map((item) => (
-        <Link  href={`/blog/${item.slug}`} className={styles.container} key={item.id}>
-          <div className={styles.imageContainer}>
+        <Link   href={`/blog/${item.slug}`} className={styles.container} key={item.id}>
+          <div key={item._id} className={styles.imageContainer}>
             <img
               src={item.img}
               alt="Blogger"
