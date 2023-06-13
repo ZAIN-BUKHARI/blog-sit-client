@@ -35,6 +35,21 @@ const modules = {
     ["link","image","video"],
   ],
 }
+const formats=[
+  "header",
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "blockquote",
+  "list",
+  "bullet",
+  "link",
+  "image",
+  "video"
+]
 
 
 
@@ -186,9 +201,11 @@ const add = () => {
             </select>
             <ReactQuill 
             modules={modules}
+            formats={formats}
             theme="snow" value={desc}  onChange={setdesc}
             className='h'
             ></ReactQuill>
+            <pre>{desc}</pre>
             
           
             

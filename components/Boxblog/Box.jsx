@@ -2,10 +2,9 @@
 import Link from "next/link";
 import styles from "./box.module.css";
 
-
 const Blog = ({blogs}) => {
-  
   return (
+    <>
     <div className={styles.mainContainer}>
       {blogs.length>0 &&blogs.map((item) => (
         <Link  href={`/blog/${item.slug}`} className={styles.container} key={item.id}>
@@ -25,6 +24,7 @@ const Blog = ({blogs}) => {
         </Link>
       ))}
     </div>
+    </>
   );
 };
 
