@@ -24,11 +24,11 @@ const Menuitems = [
   //   icon: "user",
   //   href: "/adminsales",
   // },
-  {
-    title: "Search",
-    icon: "star",
-    href: "/dashboard/admin/search",
-  },
+  // {
+  //   title: "Search",
+  //   icon: "star",
+  //   href: "/dashboard/admin/search",
+  // },
   {
     title: "Delete",
     icon: "grid",

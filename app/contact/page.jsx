@@ -2,14 +2,17 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
+import Meta from '../../components/Meta/Meta'
 
-export const metadata = {
-  title: "Blogger",
-  description: "This is Contact Page",
-};
+// export const metadata = {
+//   title: "Blogger",
+//   description: "This is Contact Page",
+// };
 
 const Contact = () => {
   return (
+    <>
+    <Meta title={'Blogger - Home'} description={'Description'}/>
     <div className={styles.container}>
       <h1 className={styles.title}>Let's Keep in Touch</h1>
       <div className={styles.content}>
@@ -34,6 +37,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 

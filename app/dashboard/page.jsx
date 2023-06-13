@@ -3,12 +3,24 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import axios from 'axios'
 import { useRouter } from "next/navigation";
-
+import Snack from "@/components/Snackbar/Snack";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
   const router=useRouter()
   useEffect(()=>{
     if(localStorage.getItem('token')){
       router.push('/dashboard/admin')
+      // toast.success('Already logged in', {
+      //   position: "bottom-center",
+      //   autoClose: 2000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      //   });
     }
   },[])
   const [email,setEmail]=useState('')
@@ -26,7 +38,16 @@ const Login = () => {
   const data={email,password}
   axios.post('/api/login',data).then((res)=>{
     if(res.status==201){
-      console.log(res)
+      toast.success('Successfully Admin log in !', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
        router.push('/dashboard/admin')
        localStorage.setItem('token',res.data)
 
@@ -35,6 +56,9 @@ const Login = () => {
  }
 
   return (
+    <>
+    
+      <Snack/>
     <div className={styles.container}>
       <h1 className={styles.title}>Welcome Back</h1>
       <h2 className={styles.subtitle}>Please sign in to see the dashboard.</h2>
@@ -63,6 +87,7 @@ const Login = () => {
     
      
     </div>
+    </>
   );
 };
 

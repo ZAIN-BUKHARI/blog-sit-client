@@ -1,9 +1,9 @@
 // 'use client'
 import React from "react";
 import FeatherIcon from "feather-icons-react";
-import Image from "next/image";
-import hero from "../../../public/hero.png";
 import { useRouter } from 'next/navigation'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 import {
   Box,
   Menu,
@@ -28,7 +28,18 @@ const ProfileDD = () => {
   };
   const logout =(e)=>{
      e.preventDefault()
-     localStorage.removeItem('adminToken')
+     localStorage.removeItem('token')
+     toast.success('Already logged in', {
+      position: "bottom-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+     
      router.push('/')
   }
   return (

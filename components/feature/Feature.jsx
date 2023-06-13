@@ -13,8 +13,7 @@ const Feature = ({blogs}) => {
      <section class="text-gray-600 body-font">
   <div class="">
   
-    <div class="flex flex-wrap mx-16">
-
+    <div class="flex flex-wrap md:mx-16 ">
 
 
         {/* 1 */}
@@ -22,8 +21,8 @@ const Feature = ({blogs}) => {
       <div class="p-4 lg:w-1/2 md:w-1/2">
         
         {/* <Link href={`/blog/${item.slug}`}> */}
-        <div onClick={()=>{push(item.slug)}}  class="h-full flex flex-col items-center text-center">
-          <img alt="team" class=" trans flex-shrink-0 rounded-lg w-full h-[300px] object-cover object-center mb-4" src={item.img}/>
+        <div onClick={()=>{push(item.slug)}}  class="h-full  flex flex-col items-center text-center">
+          <img alt="team" class=" trans flex-shrink-0 rounded-lg w-full  md:h-[300px] h-[200px] object-cover object-center mb-4" src={item.img}/>
           <div class="w-full">
             
             <h2 class="title-font font-medium text-lg text-gray-900">

@@ -8,7 +8,7 @@ import FullLayout from "../../../src/layouts/FullLayout";
 import theme from "../../../src/theme/theme";
 import React,{useEffect} from 'react'
 import { useRouter } from "next/navigation";
-
+import 'react-toastify/dist/ReactToastify.css';
 
 
 

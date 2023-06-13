@@ -39,7 +39,7 @@ const update = (admin) => {
     const Search=async(e)=>{
      e.preventDefault()
      axios.post('/api/searchslug',{slug}).then(res=>{
-        // console.log(res.data[0]._id)
+        console.log(res.data[0])
         setproduct(res.data[0])
      })
     }

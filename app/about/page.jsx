@@ -20,30 +20,21 @@ const About = () => {
       </div>
       <div className={styles.textContainer}>
         <div className={styles.item}>
-          <h1 className={styles.title}>Who Are We?</h1>
+          <h1 className={styles.title}>About Us:</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            quae dolor, optio voluptatibus magnam iure esse tempora beatae. A
-            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
-            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ducimus quae dolor, optio voluptatibus magnam iure esse tempora
-            beatae, a suscipit eos. Animi quibusdam cum omnis officiis
+          At [Blogger], we are a passionate team of writers, creators, and enthusiasts who love to explore and share our knowledge on a wide range of topics. Our goal is to create a platform that serves as a hub for insightful and engaging content, keeping our readers informed, entertained, and inspired.
+
             <br />
             <br />
-            voluptatum quo ea eveniet? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ducimus quae dolor, optio voluptatibus magnam iure
-            esse tempora beatae, a suscipit eos. Animi quibusdam cum omnis
-            officiis voluptatum quo ea eveniet?
           </p>
+            
+            <h1 className={styles.title}>What We Do:</h1>
+Through our blog, we strive to provide valuable information, thought-provoking ideas, practical tips, and entertaining stories. We cover various subjects, including but not limited to:
         </div>
-        <div className={styles.item}>
-          <h1 className={styles.title}>What We Do?</h1>
-          <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            quae dolor, optio voluptatibus magnam iure esse tempora beatae, a
-            suscipit eos. Animi quibusdam cum omnis officiis voluptatum quo ea
-            eveniet? Lorem ipsum dolor sit amet consectetur adipisicing elit. -
-            Creative Illustrations
+        <div className={styles.itemt}>
+          <h1 className={styles.titlet}>What We Do?</h1>
+          <p className={styles.desct}>
+          Lifestyle: Our lifestyle section encompasses articles on health and wellness, personal development, travel, fashion, beauty, relationships, and more. We believe in embracing a well-rounded approach to life and aim to bring you content that enhances your overall well-being.
             <br />
             <br /> - Dynamic Websites
             <br />

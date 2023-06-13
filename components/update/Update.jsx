@@ -21,6 +21,8 @@ const Update = ({
     Feature:existFeature,
     category:existcategory,
     desc:existdesc,
+    month:existmonth,
+    date:existdate
 }) => {
      // UPDATE PRODUCT SYSTEM HERE 
      const router = useRouter()
@@ -32,6 +34,8 @@ const Update = ({
   const [img, setimg] = useState(existimg||'')
   const [category, setcategory] = useState(existcategory||'')
   const [Feature, setFeature] = useState(existFeature||'')
+  const [month, setmonth] = useState(existmonth||'')
+  const [date, setdate] = useState(existdate||'')
   const handleChange = async  (e) =>{
       if(e.target.name=='slug'){
         setslug(e.target.value)
@@ -54,6 +58,13 @@ const Update = ({
       else if(e.target.name=='Feature'){
         setFeature(e.target.value)
       }
+      else if(e.target.name=='month'){
+        setmonth(e.target.value)
+      }
+     
+      else if(e.target.name=='date'){
+        setdate(e.target.value)
+      }
      
   }
  
@@ -62,8 +73,8 @@ const Update = ({
     e.preventDefault()
    
        
-        if(id!='', slug!='' && title!='' && desc!=''  && category!=''&& author!=''&& img!=''){
-        const data = {id,slug,desc,category,img,author,Feature}
+        if(id!='', slug!='' && title!='' && desc!=''  && category!=''&& author!=''&& img!='' && date!='' && Feature!='' && month!=''){
+        const data = {id,slug,desc,category,img,author,Feature,date,month,title}
         
     let response =  await fetch(`/api/update`,{
       method:'POST',
@@ -129,7 +140,28 @@ const Update = ({
             <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
             <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
             <TextField onChange={handleChange} value={img} name="img" type='text' label="Image link " variant="outlined"  />
-            <TextField onChange={handleChange} value={Feature} name="Feature" type='text' label="Feature blog " variant="outlined"  />
+            {/* <TextField onChange={handleChange} value={Feature} name="Feature" type='text' label="Feature blog " variant="outlined"  /> */}
+            <select value={month} onChange={handleChange} name='month'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
+                  <option value={''}>Month</option>
+                   <option value={'January'}>January</option>
+                   <option value={'Feburary'}>Feburary</option>
+                   <option value={'March'}>March</option>
+                   <option value={'April'}>April</option>
+                   <option value={'May'}>May</option>
+                   <option value={'June'}>June</option>
+                   <option value={'July'}>July</option>
+                   <option value={'August'}>August</option>
+                   <option value={'September'}>September</option>
+                   <option value={'October'}>October</option>
+                   <option value={'November'}>November</option>
+                   <option value={'December'}>December</option>
+            </select>
+            <select value={Feature} onChange={handleChange} name='Feature'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
+                  <option value={''}>Feature</option>
+                   <option value={'Yes'}>Yes</option>
+                   <option value={'NO'}>No</option>
+            </select>
+            <TextField onChange={handleChange} value={date} name="date" type='date' label="" variant="outlined"  />
             
             
             

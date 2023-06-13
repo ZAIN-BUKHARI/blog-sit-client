@@ -16,6 +16,7 @@ export default async function Home() {
   const blogs = await getData()
   return (
     <>
+   
     <Feature blogs={blogs} />
     <Signleblog blogs={blogs}/>
     </>
