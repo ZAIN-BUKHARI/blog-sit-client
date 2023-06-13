@@ -11,16 +11,16 @@ const Login = () => {
   useEffect(()=>{
     if(localStorage.getItem('token')){
       // router.push('/dashboard/admin')
-      // toast.success('Already logged in', {
-      //   position: "bottom-center",
-      //   autoClose: 2000,
-      //   hideProgressBar: false,
-      //   closeOnClick: true,
-      //   pauseOnHover: true,
-      //   draggable: true,
-      //   progress: undefined,
-      //   theme: "light",
-      //   });
+      toast.success('Already logged in', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
   },[])
   const [email,setEmail]=useState('')
