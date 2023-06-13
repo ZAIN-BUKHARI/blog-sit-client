@@ -1,7 +1,7 @@
 import Signleblog from "@/components/singleblog/Signleblog";
 import Feature from '../components/feature/Feature'
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/blog", {
+  const res = await fetch("/api/blog", {
     cache: "no-store",
   });
 
