@@ -36,6 +36,8 @@ const add = () => {
   const [author, setauthor] = useState('')
   const [date, setdate] = useState('')
   const [month, setmonth] = useState('')
+  const [img2, setimg2] = useState('')
+  const [desc2, setdesc2] = useState('')
 
  
   useEffect(()=>{
@@ -72,6 +74,12 @@ const add = () => {
       else if(e.target.name=='month'){
         setmonth(e.target.value)
       }
+      else if(e.target.name=='img2'){
+        setimg2(e.target.value)
+      }
+      else if(e.target.name=='desc2'){
+        setdesc2(e.target.value)
+      }
 
       
      
@@ -79,9 +87,10 @@ const add = () => {
   const submitform = async (e) =>{
     e.preventDefault()
         if( slug!='' && title!='' && desc!='' && category!=''&& author!='',date!='',img!=''  && Feature!='' && month!=''){
-        const data = {slug,title,img,desc,category,Feature,author,date,month}
+        const data = {slug,title,img,desc,category,Feature,author,date,month,img2,desc2}
     let a = await axios.post('/api/blog',data)
-    if(a.data==true){
+    console.log(a)
+    if(a.status==201){
        toast.success('Successfully Blog Post!', {
         position: "bottom-center",
         autoClose: 2000,
@@ -94,7 +103,7 @@ const add = () => {
         });
         
        
-    }else if(a.data==false){
+    }else if(a.status==500){
       toast.info('You put some wrong info! Try again ', {
         position: "bottom-center",
         autoClose: 2000,
@@ -142,8 +151,10 @@ const add = () => {
             <TextField onChange={handleChange} value={title} name="title" label="Title" variant="outlined" />
             <TextField onChange={handleChange} value={category} type='text' name="category" label="Category" variant="outlined" />
             <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
-            <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
             <TextField onChange={handleChange} value={img} name="img" type='text' label="Image link " variant="outlined"  />
+            <TextField onChange={handleChange} value={desc2} name="desc2" label="Description" variant="outlined" multiline rows={4} /> 
+            <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
+            <TextField onChange={handleChange} value={img2} name="img2" type='text' label="2nd Image link " variant="outlined"  />
             <TextField onChange={handleChange} value={date} name="date" type='date' label="" variant="outlined"  />
             
             <select value={month} onChange={handleChange} name='month'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">

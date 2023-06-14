@@ -53,6 +53,16 @@ const BlogSchema = new Schema({
     {
         type:String,
         trim:true,
+    },
+    img2:
+    {
+        type:String,
+        trim:true,
+    },
+    desc2:
+    {
+        type:String,
+        trim:true,
     }
     
     

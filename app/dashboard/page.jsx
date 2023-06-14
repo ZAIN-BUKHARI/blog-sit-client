@@ -35,10 +35,11 @@ const Login = () => {
  }
  const submit =async(e)=>{
   e.preventDefault()
-  const data={email,password}
-  axios.post('/api/login',data).then((res)=>{
-    console.log(res)
-    if(res.status==201){
+  if(email!='' && password!=''){
+  // const data={email,password}
+  // axios.post('/api/login',data).then((res)=>{
+  //   console.log(res)
+    if(email=='admin123@gmail.com' && password=='admin123'){
       toast.success('Successfully Admin log in !', {
         position: "bottom-center",
         autoClose: 2000,
@@ -49,11 +50,40 @@ const Login = () => {
         progress: undefined,
         theme: "light",
         });
-       router.push('/dashboard/admin')
-       localStorage.setItem('token',res.data)
+        let token=Math.random()
+        localStorage.setItem('token',token)
+        if(localStorage.getItem('token')){
+          router.push('/dashboard/admin')
+
+        }
 
      }
-  })
+     else{
+      toast.error('Invalid credentials !', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+     }
+  // })
+}else{
+  toast.error('Cannot set empty fields !', {
+    position: "bottom-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+
+}
  }
 
   return (

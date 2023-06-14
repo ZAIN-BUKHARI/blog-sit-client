@@ -53,7 +53,7 @@ const data = await getData(params.slug)
                   <time
                     className="text-gray-500 dark:text-gray-400"
                     >
-                  <span> {data.date}· 5 min read</span>
+                  <span> {data.month} {data.date.slice(5)}· 5 min read</span>
                   </time>
                 </div>
               </div>
@@ -64,13 +64,16 @@ const data = await getData(params.slug)
       <div className="relative mt-10 mb-10 z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
         
           <img
+          // src="https://images.pexels.com/photos/3951790/pexels-photo-3951790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           src={data.img}
+          // src='https://images.pexels.com/photos/5868740/pexels-photo-5868740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
             loading="eager"
             fill
-            sizes="100vw"
-            className="imageset object-cover "
+            // sizes="100vw"
+            className=" w-[800px] h-[500px]  object-cover "
           />
       </div>
+      {/* https://images.pexels.com/photos/3951790/pexels-photo-3951790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1 */}
 
       <Container>
         <article className="mx-auto max-w-screen-md font-light  ">
@@ -79,7 +82,19 @@ const data = await getData(params.slug)
             <br/>
             <br/>
             <br/>
-            {data.desc.slice(0,1000)}
+            <div className="relative mt-10 mb-10 z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
+        
+        <img
+        // src="https://images.pexels.com/photos/3951790/pexels-photo-3951790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        src={data.img2}
+        // src='https://images.pexels.com/photos/5868740/pexels-photo-5868740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+          loading="eager"
+          fill
+          // sizes="100vw"
+          className=" w-[800px] h-[500px]  object-cover "
+        />
+    </div>
+            {data.desc2.slice(0,1000)}
           </div>
           <div className="mb-7 mt-7 flex justify-center">
           </div>

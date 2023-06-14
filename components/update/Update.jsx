@@ -22,7 +22,9 @@ const Update = ({
     category:existcategory,
     desc:existdesc,
     month:existmonth,
-    date:existdate
+    date:existdate,
+    img2:existimg2,
+    desc2:existddesc2
 }) => {
      // UPDATE PRODUCT SYSTEM HERE 
     //  const router = useRouter()
@@ -36,6 +38,8 @@ const Update = ({
   const [Feature, setFeature] = useState(existFeature||'')
   const [month, setmonth] = useState(existmonth||'')
   const [date, setdate] = useState(existdate||'')
+  const [img2, setimg2] = useState(existimg2||'')
+  const [desc2, setdesc2] = useState(existdesc2||'')
   const handleChange = async  (e) =>{
       if(e.target.name=='slug'){
         setslug(e.target.value)
@@ -66,6 +70,14 @@ const Update = ({
         setdate(e.target.value)
       }
      
+      else if(e.target.name=='img2'){
+        setimg2(e.target.value)
+      }
+     
+      else if(e.target.name=='desc2'){
+        setdesc2(e.target.value)
+      }
+     
   }
  
   
@@ -74,7 +86,7 @@ const Update = ({
    
        
         if(id!='', slug!='' && title!='' && desc!=''  && category!=''&& author!=''&& img!='' && date!='' && Feature!='' && month!=''){
-        const data = {id,slug,desc,category,img,author,Feature,date,month,title}
+        const data = {id,slug,desc,category,img,author,Feature,date,month,title,img2,desc2}
         
     let response =  await fetch(`/api/update`,{
       method:'POST',
@@ -85,7 +97,7 @@ const Update = ({
     })
     let a = await response.json()
     console.log(a)
-    if(a==true){
+    if(a.status==201){
       //  router.push('/dashboard/admin/update')
        toast.success('Successfully Blog updated!', {
         position: "bottom-center",
@@ -98,7 +110,7 @@ const Update = ({
         theme: "light",
         });
        
-    }else if(a==false){
+    }else if(a.status==501){
       toast.info('You put some wrong info! Try again ', {
         position: "bottom-center",
         autoClose: 2000,
@@ -140,7 +152,8 @@ const Update = ({
             <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
             <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
             <TextField onChange={handleChange} value={img} name="img" type='text' label="Image link " variant="outlined"  />
-            {/* <TextField onChange={handleChange} value={Feature} name="Feature" type='text' label="Feature blog " variant="outlined"  /> */}
+            <TextField onChange={handleChange} value={desc2} name="desc2" type='text' label="Feature blog " variant="outlined"  />
+            <TextField onChange={handleChange} value={img2} name="img2" type='text' label="Feature blog " variant="outlined"  />
             <select value={month} onChange={handleChange} name='month'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
                   <option value={''}>Month</option>
                    <option value={'January'}>January</option>
