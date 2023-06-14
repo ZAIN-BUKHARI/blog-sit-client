@@ -43,7 +43,7 @@ const Navbar = () => {
   // const session = useSession();
 
   return (
-    <div className='md:mx-auto font-serif md:max-w-[1366px]  md:px-[60px]  md:justify-between md:flex h-[100px]'>
+    <div className='md:mx-auto mx-5 font-serif md:max-w-[1366px]  md:px-[60px]  md:justify-between md:flex h-[100px]'>
       <Link href="/" className='  text-[22px] font-bold flex justify-center items-center'>
         Blog<span className="text-green-400 flex justify-center items-center font-serif" >ger</span>
       </Link>
