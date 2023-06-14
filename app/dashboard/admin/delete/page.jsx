@@ -14,7 +14,7 @@ import {
   Button,
 } from 
 "@mui/material";
-// import BaseCard from "../../../../src/components/baseCard/BaseCard";
+import BaseCard from "../../../../src/components/baseCard/BaseCard";
 import axios from 'axios';
 import Snack from '@/components/Snackbar/Snack';
 
@@ -92,7 +92,7 @@ const del = () => {
 
        <h1 className='text-3xl text-pink-500 font-bold my-5 text-center'>DELETE BLOG BY SLUG</h1>
       <Grid item xs={12} lg={12}>
-        {/* <BaseCard > */}
+        <BaseCard >
           <Stack spacing={3}>
           
             <TextField onChange={handleChange} value={slug}  name="slug" label="Slug" variant="outlined"  />       
@@ -101,7 +101,7 @@ const del = () => {
           <Button onClick={DELETE} variant="outlined" mt={2}>
             DELETE
           </Button>
-        {/* </BaseCard> */}
+        </BaseCard>
       </Grid>
 
      

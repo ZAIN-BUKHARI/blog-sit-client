@@ -14,42 +14,12 @@ import {
   Button,
 } from 
 "@mui/material";
-// import BaseCard from "../../../../src/components/baseCard/BaseCard";
+import BaseCard from "../../../../src/components/baseCard/BaseCard";
 import Snack from '@/components/Snackbar/Snack';
-// import ReactQuill from 'react-quill';
-// import 'react-quill/dist/quill.snow.css';
+
 import axios from 'axios';
 
-// const modules = {
-//   toolbar:[
-//     [{header:[1,2,3,4,5,6,false]}],
-//     [{font:[]}],
-//     [{size:[]}],
-//     ["bold","italic","underline","strike","blackquote"],
-//     [
-//       {list:"ordered"},
-//       {list:"bullet"},
-//       {indent:"-1"},
-//       {indent:"+1"},
-//     ],
-//     ["link","image","video"],
-//   ],
-// }
-// const formats=[
-//   "header",
-//   "font",
-//   "size",
-//   "bold",
-//   "italic",
-//   "underline",
-//   "strike",
-//   "blockquote",
-//   "list",
-//   "bullet",
-//   "link",
-//   "image",
-//   "video"
-// ]
+
 
 
 
@@ -157,17 +127,16 @@ const add = () => {
 
   
     return (
-      
+      <>
+        <Snack/>
       <ThemeProvider theme={theme}>
          
        <FullLayout>
-        <Snack/>
         {/* { !admin.admin.value && <h1 className='text-3xl text-pink-500 my-5 font-bold text-center'>Only z-wear admins allow here</h1>} */}
           {/* <Grid container spacing={0}> */}
         <h1 className='text-3xl font-bold text-pink-500 text-center' >POST BLOG</h1>
       <Grid item xs={12} lg={12}>
-        {/* <BaseCard > */}
-          {/* <Grid> */}
+        <BaseCard >
           <Stack spacing={3}>
             <TextField onChange={handleChange} value={slug} className='w-full'  name="slug" label="Slug" variant="outlined"  />
             <TextField onChange={handleChange} value={title} name="title" label="Title" variant="outlined" />
@@ -213,17 +182,41 @@ const add = () => {
             Post
           </Button>
           
-        {/* </BaseCard> */}
-      {/* </Grid> */}
+        </BaseCard>
+      </Grid>
 
-      
+      <Grid item xs={12} lg={12}>
+        <BaseCard >
+          <Stack spacing={3}>
+          
+            <TextField    name="delslug" label="Slug" variant="outlined"  />       
+          </Stack>
+          <br />
+          <Button variant="outlined" mt={2}>
+            DELETE
+          </Button>
+        </BaseCard>
+      </Grid>
 
      
-    </Grid>
+    {/* </Grid> */}
+    <h1 className='text-3xl text-pink-500 font-bold my-5 '>IMAGE FILE TO URL</h1>
+    <Grid>
+  <BaseCard>
+  <div className='flex flex-col'>
+    <TextField   name="cloud" type='file' label="" variant="outlined"  />
+    <Button variant="outlined" mt={2}>Upload</Button>
+    </div>
+    </BaseCard>
+      </Grid>
+     
+
+     
     
   
         </FullLayout>
         </ThemeProvider>
+        </>
       );
 }
 
