@@ -22,7 +22,7 @@ async function getData() {
   return (
     <>
     <Snack />
-    <div className={style.container}>
+    <div className='md:mx-[0px] mx-[60px] mt-[10px] md:mt-[0px] '>
     <Feature blogs={blogs} />
     <Signleblog blogs={blogs}/>
     </div>

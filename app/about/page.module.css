@@ -61,25 +61,26 @@
   .itemt{
     display: none;
   }
+  .container {
+    /* max-width: 600px;
+    min-height: 100vh; */
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
 
   
   }
   .container {
-    max-width: 1366px;
-    min-height: 100vh;
+    /* max-width: 1366px;
+    min-height: 100vh; */
     padding: 0 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     }
-    .container {
-      max-width: 600px;
-      min-height: 100vh;
-      padding: 0 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      }
+    
   
   
   

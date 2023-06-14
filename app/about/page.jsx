@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <div className=' md:mx-[60px] mx-[10px]'>
       <div className={styles.imgContainer}>
         <img
           src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

@@ -5,6 +5,7 @@ import styles from "./box.module.css";
 const Blog = ({blogs}) => {
   return (
     <>
+    <div className='md:mx-[60px] mx-[10px]'>
     <div className={styles.mainContainer}>
       {blogs.length>0 &&blogs.map((item) => (
         <Link   href={`/blog/${item.slug}`} className={styles.container} key={item.id}>
@@ -23,6 +24,7 @@ const Blog = ({blogs}) => {
           </div>
         </Link>
       ))}
+    </div>
     </div>
     </>
   );
