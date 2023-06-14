@@ -8,7 +8,7 @@ import Blog from "../../../models/Blog";
 //POST CREATE BLOG
 export const POST = async (request) => {
   const body = await request.json();
-  console.log(body)
+  console.log(body.month)
   const newBlog = new Blog(body);
 
   try {

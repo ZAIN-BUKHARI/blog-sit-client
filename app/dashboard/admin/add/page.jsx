@@ -6,7 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import {useState }from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import {
   Grid,
   Stack,
@@ -14,7 +14,7 @@ import {
   Button,
 } from 
 "@mui/material";
-import BaseCard from "../../../../src/components/baseCard/BaseCard";
+// import BaseCard from "../../../../src/components/baseCard/BaseCard";
 import Snack from '@/components/Snackbar/Snack';
 // import ReactQuill from 'react-quill';
 // import 'react-quill/dist/quill.snow.css';
@@ -56,7 +56,7 @@ import axios from 'axios';
 
 
 const add = () => {
-  // const router=useRouter()
+  const router=useRouter()
   const [slug, setslug] = useState('')
   const [title, settitle] = useState('')
   const [desc, setdesc] = useState('')
@@ -70,7 +70,7 @@ const add = () => {
  
   useEffect(()=>{
     if(!localStorage.getItem('token')){
-      // router.push('/dashboard')
+      router.push('/dashboard')
     }
   },[])
 
@@ -101,7 +101,6 @@ const add = () => {
       }
       else if(e.target.name=='month'){
         setmonth(e.target.value)
-        console.log(e.target.value)
       }
 
       
@@ -110,7 +109,7 @@ const add = () => {
   const submitform = async (e) =>{
     e.preventDefault()
         if( slug!='' && title!='' && desc!='' && category!=''&& author!='',date!='',img!=''  && Feature!='' && month!=''){
-        const data = {slug,title,img,desc,category,Feature,author,date}
+        const data = {slug,title,img,desc,category,Feature,author,date,month}
     let a = await axios.post('/api/blog',data)
     if(a.data==true){
        toast.success('Successfully Blog Post!', {
@@ -164,13 +163,13 @@ const add = () => {
        <FullLayout>
         <Snack/>
         {/* { !admin.admin.value && <h1 className='text-3xl text-pink-500 my-5 font-bold text-center'>Only z-wear admins allow here</h1>} */}
-          <Grid container spacing={0}>
+          {/* <Grid container spacing={0}> */}
         <h1 className='text-3xl font-bold text-pink-500 text-center' >POST BLOG</h1>
       <Grid item xs={12} lg={12}>
-        <BaseCard >
+        {/* <BaseCard > */}
+          {/* <Grid> */}
           <Stack spacing={3}>
-         
-            <TextField onChange={handleChange} value={slug}  name="slug" label="Slug" variant="outlined"  />
+            <TextField onChange={handleChange} value={slug} className='w-full'  name="slug" label="Slug" variant="outlined"  />
             <TextField onChange={handleChange} value={title} name="title" label="Title" variant="outlined" />
             <TextField onChange={handleChange} value={category} type='text' name="category" label="Category" variant="outlined" />
             <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
@@ -214,8 +213,8 @@ const add = () => {
             Post
           </Button>
           
-        </BaseCard>
-      </Grid>
+        {/* </BaseCard> */}
+      {/* </Grid> */}
 
       
 

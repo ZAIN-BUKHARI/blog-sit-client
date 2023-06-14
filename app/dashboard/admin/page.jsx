@@ -26,7 +26,7 @@ export default function Index() {
     <ThemeProvider theme={theme}>
     {/* { !admin.admin.value && <h1 className='text-3xl text-pink-500 my-5 text-center'>Only z-wear admins allow here</h1>} */}
     <FullLayout>
-    <Grid container spacing={0}>
+    {/* <Grid container spacing={0}> */}
       <Grid item xs={12} lg={12}>
         <SalesOverview />
       </Grid>
@@ -39,7 +39,7 @@ export default function Index() {
       {/* <Grid item xs={12} lg={8}>
         <ProductPerfomance admin={admin} />
       </Grid> */}
-    </Grid>
+    {/* </Grid> */}
     </FullLayout>
     
     </ThemeProvider>

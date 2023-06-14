@@ -27,24 +27,11 @@
   .imgContainer{
     display: none;
   }
-  .form {
-    /* flex: 1; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 20px; */
-  }
+  
   .input,
 .textArea {
-  width: 300px;
+  width: 250px;
 
-  /* padding: 20px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #bbb;
-  border: 3px solid #bbb;
-  font-size: 20px;
-  font-weight: bold; */
 }
 .textArea{
   height: 150px;

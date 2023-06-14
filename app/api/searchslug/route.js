@@ -1,4 +1,4 @@
-//   export default   ConnectMongoDB(handler)
+
 import { NextResponse } from "next/server";
 import connect from "../../../middleware/mongoose";
 import Blog from "../../../models/Blog";
@@ -23,29 +23,17 @@ export const POST = async (request) => {
   }
 };
 
-// export const GET = async (request, { params }) => {
-//   const { slug } = params;
-//   console.log(slug)
 
+
+
+// export const GET = async (request, { params }) => {
+//   console.log(params.slug)
 //   try {
 //     await connect();
+//     const userPromps = await Blog.findOne({ slug: params.slug });
 
-//     const post = await Blog.findById(id);
-
-//     return new NextResponse(JSON.stringify(post), { status: 200 });
-//   } catch (err) {
-//     return new NextResponse("Database Error", { status: 500 });
+//     return new Response(JSON.stringify(userPromps), { status: 200 });
+//   } catch (error) {
+//     return new Response("Failed to fetch all prompts", { status: 500 });
 //   }
 // };
-
-export const GET = async (request, { params }) => {
-  console.log(params.slug)
-  try {
-    await connect();
-    const userPromps = await Blog.findOne({ slug: params.slug });
-
-    return new Response(JSON.stringify(userPromps), { status: 200 });
-  } catch (error) {
-    return new Response("Failed to fetch all prompts", { status: 500 });
-  }
-};

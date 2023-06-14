@@ -11,7 +11,7 @@ import {
   Button,
 } from 
 "@mui/material";
-import BaseCard from "../../../../src/components/baseCard/BaseCard";
+// import BaseCard from "../../../../src/components/baseCard/BaseCard";
 // import Center from '../components/Center'
 import axios from 'axios';
 import Update from '../../../../components/update/Update'
@@ -55,7 +55,7 @@ const update = (admin) => {
     
     <h1 className='text-3xl text-pink-500 font-bold my-5 text-center'>UPDATE BLOG BY SLUG</h1>
       <Grid item xs={12} lg={12}>
-        <BaseCard >
+        {/* <BaseCard > */}
           <Stack spacing={3}>
           
             <TextField onChange={find} value={slug} type='text'  name="search" label="Search" variant="outlined"  />       
@@ -66,7 +66,7 @@ const update = (admin) => {
           </Button>
 
 
-        </BaseCard>
+        {/* </BaseCard> */}
       </Grid>
       {/* {product.length==0  && <h1 className='text-3xl text-pink-500 font-bold my-5 text-center'>SEARCH PRODUCT BY SLUG AN UPDATE</h1>} */}
       {product.length!=0 && 

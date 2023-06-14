@@ -2,15 +2,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import axios from 'axios'
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Snack from "@/components/Snackbar/Snack";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
-  // const router=useRouter()
+  const router=useRouter()
   useEffect(()=>{
     if(localStorage.getItem('token')){
-      // router.push('/dashboard/admin')
+      router.push('/dashboard/admin')
       toast.success('Already logged in', {
         position: "bottom-center",
         autoClose: 2000,
@@ -37,6 +37,7 @@ const Login = () => {
   e.preventDefault()
   const data={email,password}
   axios.post('/api/login',data).then((res)=>{
+    console.log(res)
     if(res.status==201){
       toast.success('Successfully Admin log in !', {
         position: "bottom-center",
