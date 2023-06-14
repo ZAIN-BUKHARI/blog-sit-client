@@ -38,7 +38,7 @@
 	color: #bbb;
   }
   
-  .container {
+  /* .container {
 	max-width: 1366px;
 	min-height: 100vh;
 	margin: 0 auto;
@@ -46,21 +46,20 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  }
+  } */
   .h{
 	height: 300px;
 	padding-bottom: 50px;
   }
   @media only screen and (max-width: 600px) {
-	.container {
+	/* .container {
 		max-width: 1366px;
 		min-height: 100vh;
-		/* margin: 0 auto; */
 		padding: 0 0px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-	  }
+	  } */
   }
   .trans:hover{
     padding: 5px;
