@@ -27,10 +27,11 @@
     outline: none;
     color: #bbb;
     font-size: 20px;
+    width: 250px;
     font-weight: bold;
   }
   .button {
-    width: 300px;
+    width: 100px;
     padding: 20px;
     cursor: pointer;
     background-color: #53c28b;
@@ -70,6 +71,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-left:60px ;
 }
 
 .input {
@@ -78,14 +80,14 @@
   border: 2px solid #bbb;
   border-radius: 5px;
   outline: none;
-  width: 400px;
+  /* width: 400px; */
   color: #bbb;
   font-size: 20px;
   font-weight: bold;
 }
 
 .button {
-  width: 400px;
+  width: 300px;
   padding: 20px;
   cursor: pointer;
   background-color: #53c28b;
