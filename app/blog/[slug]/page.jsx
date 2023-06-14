@@ -73,8 +73,8 @@ const data = await getData(params.slug)
       </div>
 
       <Container>
-        <article className="mx-auto max-w-screen-md ">
-          <div className="prose mx-auto my-3 text-gray-800 ">
+        <article className="mx-auto max-w-screen-md font-light  ">
+          <div className="prose mx-auto my-3 text-gray-500 text-[20px] font-sans ">
             {data.desc.slice(0,1000)}
             <br/>
             <br/>

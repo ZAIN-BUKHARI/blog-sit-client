@@ -185,30 +185,7 @@ const add = () => {
         </BaseCard>
       </Grid>
 
-      <Grid item xs={12} lg={12}>
-        <BaseCard >
-          <Stack spacing={3}>
-          
-            <TextField    name="delslug" label="Slug" variant="outlined"  />       
-          </Stack>
-          <br />
-          <Button variant="outlined" mt={2}>
-            DELETE
-          </Button>
-        </BaseCard>
-      </Grid>
-
-     
-    {/* </Grid> */}
-    <h1 className='text-3xl text-pink-500 font-bold my-5 '>IMAGE FILE TO URL</h1>
-    <Grid>
-  <BaseCard>
-  <div className='flex flex-col'>
-    <TextField   name="cloud" type='file' label="" variant="outlined"  />
-    <Button variant="outlined" mt={2}>Upload</Button>
-    </div>
-    </BaseCard>
-      </Grid>
+      
      
 
      
