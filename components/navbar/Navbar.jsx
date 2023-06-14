@@ -44,10 +44,10 @@ const Navbar = () => {
 
   return (
     <div className='md:mx-auto mx-5 font-serif md:max-w-[1366px]  md:px-[60px]  md:justify-between md:flex h-[100px]'>
-      <Link href="/" className='  text-[22px] font-bold flex justify-center items-center'>
+      <Link href="/" className='  md:text-[40px] text-[22px] font-bold flex justify-center items-center'>
         Blog<span className="text-green-400 flex justify-center items-center font-serif" >ger</span>
       </Link>
-      <div className='flex text-[18px] items-center gap-[20px] mb-[100px] md:mb-[0px] mt-[30px] justify-evenly'>
+      <div className='flex md:text-[22px] text-[18px] items-center gap-[20px] mb-[100px] md:mb-[0px] mt-[30px] justify-evenly'>
         {/* <DarkModeToggle /> */}
         {links.map((link) => (
           <div className=" ">
