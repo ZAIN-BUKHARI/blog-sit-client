@@ -608,7 +608,10 @@ footer .icon i{
 		/* flex-direction: column-reverse; */
 	}
 	.hero{
-		height: 200vh;
+		height: 180vh;
+	}
+	.fakejustofrgit{
+		height: 180vh;
 	}
 	.hero .img{
 		width: 100%;

@@ -31,7 +31,6 @@ const add = () => {
   const [title, settitle] = useState('')
   const [desc, setdesc] = useState('')
   const [category, setcategory] = useState('')
-  const [Feature, setFeature] = useState('')
   const [img, setimg] = useState('')
   const [author, setauthor] = useState('')
   const [date, setdate] = useState('')
@@ -62,9 +61,6 @@ const add = () => {
       else if(e.target.name=='img'){
         setimg(e.target.value)
       }
-      else if(e.target.name=='Feature'){
-        setFeature(e.target.value)
-      }
       else if(e.target.name=='author'){
         setauthor(e.target.value)
       }
@@ -86,8 +82,8 @@ const add = () => {
   }
   const submitform = async (e) =>{
     e.preventDefault()
-        if( slug!='' && title!='' && desc!='' && category!=''&& author!='',date!='',img!=''  && Feature!='' && month!=''){
-        const data = {slug,title,img,desc,category,Feature,author,date,month,img2,desc2}
+        if( slug!='' && title!='' && desc!='' && category!=''&& author!='',date!='',img!=''   && month!=''){
+        const data = {slug,title,img,desc,category,author,date,month,img2,desc2}
     let a = await axios.post('/api/blog',data)
     console.log(a)
     if(a.status==201){
@@ -150,11 +146,11 @@ const add = () => {
             <TextField onChange={handleChange} value={slug} className='w-full'  name="slug" label="Slug" variant="outlined"  />
             <TextField onChange={handleChange} value={title} name="title" label="Title" variant="outlined" />
             <TextField onChange={handleChange} value={category} type='text' name="category" label="Category" variant="outlined" />
-            <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
             <TextField onChange={handleChange} value={img} name="img" type='text' label="Image link " variant="outlined"  />
-            <TextField onChange={handleChange} value={desc2} name="desc2" label="Description" variant="outlined" multiline rows={4} /> 
-            <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
             <TextField onChange={handleChange} value={img2} name="img2" type='text' label="2nd Image link " variant="outlined"  />
+            <TextField onChange={handleChange} value={desc2} name="desc2" label="Description" variant="outlined" multiline rows={4} /> 
+            <TextField onChange={handleChange} value={desc} name="desc" label="Description" variant="outlined" multiline rows={4} /> 
+            <TextField onChange={handleChange} value={author} name="author" type='text' label="Author name " variant="outlined"  />
             <TextField onChange={handleChange} value={date} name="date" type='date' label="" variant="outlined"  />
             
             <select value={month} onChange={handleChange} name='month'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
@@ -171,11 +167,6 @@ const add = () => {
                    <option value={'October'}>October</option>
                    <option value={'November'}>November</option>
                    <option value={'December'}>December</option>
-            </select>
-            <select value={Feature} onChange={handleChange} name='Feature'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
-                  <option value={''}>Feature</option>
-                   <option value={'Yes'}>Yes</option>
-                   <option value={'NO'}>No</option>
             </select>
             {/* <ReactQuill 
             modules={modules}

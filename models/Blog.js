@@ -39,11 +39,6 @@ const BlogSchema = new Schema({
         required:true,
         trim:true,
     },
-    Feature:
-    {
-        type:String,
-        trim:true,
-    },
     date:
     {
         type:String,

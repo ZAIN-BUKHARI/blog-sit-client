@@ -46,8 +46,8 @@ const data=
             {data.title}
           </h1>
 
-          <div className="mt-3 flex justify-center space-x-3 text-gray-500 ">
-            <div className="flex items-center gap-3">
+          <div className="mt-3 flex md:ml-[270px] justify-center space-x-3 text-gray-500 ">
+            <div className="flex  items-center gap-3">
               <div className="relative  flex-shrink-0">
                   <Link href={`#`} className="">
                     <img

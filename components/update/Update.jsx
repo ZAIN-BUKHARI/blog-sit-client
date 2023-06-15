@@ -18,7 +18,6 @@ const Update = ({
     title:existtitle,
     author:existauthor,
     img:existimg,
-    Feature:existFeature,
     category:existcategory,
     desc:existdesc,
     month:existmonth,
@@ -35,7 +34,6 @@ const Update = ({
   const [author, setauthor] = useState(existauthor||'')
   const [img, setimg] = useState(existimg||'')
   const [category, setcategory] = useState(existcategory||'')
-  const [Feature, setFeature] = useState(existFeature||'')
   const [month, setmonth] = useState(existmonth||'')
   const [date, setdate] = useState(existdate||'')
   const [img2, setimg2] = useState(existimg2||'')
@@ -58,9 +56,6 @@ const Update = ({
       }
       else if(e.target.name=='img'){
         setimg(e.target.value)
-      }
-      else if(e.target.name=='Feature'){
-        setFeature(e.target.value)
       }
       else if(e.target.name=='month'){
         setmonth(e.target.value)
@@ -85,8 +80,8 @@ const Update = ({
     e.preventDefault()
    
        
-        if(id!='', slug!='' && title!='' && desc!=''  && category!=''&& author!=''&& img!='' && date!='' && Feature!='' && month!=''){
-        const data = {id,slug,desc,category,img,author,Feature,date,month,title,img2,desc2}
+        if(id!='', slug!='' && title!='' && desc!=''  && category!=''&& author!=''&& img!='' && date!=''  && month!=''){
+        const data = {id,slug,desc,category,img,author,date,month,title,img2,desc2}
         
     let response =  await fetch(`/api/update`,{
       method:'POST',
@@ -169,11 +164,11 @@ const Update = ({
                    <option value={'November'}>November</option>
                    <option value={'December'}>December</option>
             </select>
-            <select value={Feature} onChange={handleChange} name='Feature'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
+            {/* <select value={Feature} onChange={handleChange} name='Feature'  className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-blue-500 text-base pl-3 pr-10">
                   <option value={''}>Feature</option>
                    <option value={'Yes'}>Yes</option>
                    <option value={'NO'}>No</option>
-            </select>
+            </select> */}
             <TextField onChange={handleChange} value={date} name="date" type='date' label="" variant="outlined"  />
             
             
