@@ -17,7 +17,7 @@ const Hero = () => {
             {/* left  */}
             <div className="left">
                <div className="img" >
-              <img src="home.png" alt="" data-aos="zoom-in-right" data-aos-duration="2000"/>
+              <img src="home.png" alt="" data-aos="fade-left" data-aos-duration="2000"/>
               
                </div>
             </div>
