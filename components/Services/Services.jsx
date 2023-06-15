@@ -22,7 +22,7 @@ const Service = () => {
                     ServicesData.map((val)=>{
                         return (
                         <>
-                        <div className="box " data-aos="fade-right" data-aos-duration="2000">
+                        <div className="box " data-aos="fade-down" data-aos-duration="2000">
                             <div className="img point" onClick={()=>{link(val.slug)}}>
                                 <img src={val.img} alt="" />
                             </div>

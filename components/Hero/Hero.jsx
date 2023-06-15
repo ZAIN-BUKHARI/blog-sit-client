@@ -21,7 +21,7 @@ const Hero = () => {
                </div>
             </div>
             {/* right  */}
-            <div className="right topMargin"data-aos="zoom-in-left" data-aos-duration="2000" >
+            <div className="right topMargin"data-aos="fade-down" data-aos-duration="2000" >
                 <h1>Welcome to<br />
                 Blog<span className='text-green-400'>ger</span>
                 </h1>
