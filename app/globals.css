@@ -565,6 +565,12 @@ footer .icon i{
 }
 
 @media screen and(max-width:768px){
+	.containersui{
+		max-width: 80%;
+		/* margin: auto; */
+		max-width: 100%;
+		margin: 0px;
+	  }
 	.hero h1{
 		font-size: 10px;
 	}
