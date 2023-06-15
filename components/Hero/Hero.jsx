@@ -7,8 +7,8 @@ import 'aos/dist/aos.css';
 const Hero = () => {
   useEffect(()=>{
     AOS.init()
-
   },[])
+
   return (
     <>
     <section className="hero " >
@@ -17,11 +17,12 @@ const Hero = () => {
             {/* left  */}
             <div className="left">
                <div className="img" >
-                <img src="home.png" alt=""data-aos="zoom-in-right" data-aos-duration="2000"/>
+              <img src="home.png" alt="" data-aos="zoom-in-right" data-aos-duration="2000"/>
+              
                </div>
             </div>
             {/* right  */}
-            <div className="right topMargin"data-aos="fade-down" data-aos-duration="2000" >
+            <div className="right topMargin"  >
                 <h1>Welcome to<br />
                 Blog<span className='text-green-400'>ger</span>
                 </h1>
