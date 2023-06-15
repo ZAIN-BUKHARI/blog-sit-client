@@ -10,22 +10,14 @@
   font-size: 22px;
   
 } */
-@media only screen and (max-width: 600px) {
-  .logo {
-    font-weight: bold;
-    font-size: 22px;
-    /* display: none; */
-    margin-bottom: 50px;
-    position: absolute;
-    right: 40%;
-    
+.un{
+  margin: 0 15px;
+}
+@media (max-width: 768px) {
+  .un{
+    margin: 0 0;
   }
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-  }
+  
 
 }
 
