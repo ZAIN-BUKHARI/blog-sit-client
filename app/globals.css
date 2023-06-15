@@ -565,8 +565,11 @@ footer .icon i{
 }
 
 @media screen and(max-width:768px){
+	p{
+		font-size:5px
+	}
 	.containersui{
-		max-width: 80%;
+		/* max-width: 80%; */
 		/* margin: auto; */
 		max-width: 100%;
 		margin: 0px;
