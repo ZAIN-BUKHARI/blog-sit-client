@@ -18,13 +18,13 @@ const About = () => {
         {Data.map((value)=>{
         return (
         <><div className="left mtop">
-        <div className="heading">
+        <div className="heading" data-aos="fade-left" data-aos-duration="5000">
             <h3>About Me</h3>
             <h1>{value.title}</h1>
         </div>
-         <p>{value.desc1}</p>
-         <p>{value.desc2}</p>
-         <p>{value.desc3}</p>
+         <p  data-aos-duration="5000" data-aos="fade-left">{value.desc1}</p>
+         <p  data-aos-duration="5000" data-aos="fade-left">{value.desc2}</p>
+         <p  data-aos-duration="5000" data-aos="fade-left">{value.desc3}</p>
          <Link href={'/about'}><button className="primary-btn">
             See more
          </button></Link>

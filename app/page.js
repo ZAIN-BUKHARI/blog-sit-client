@@ -8,6 +8,8 @@ import About from '../components/About/About';
 import Services from '../components/Services/Services'
 import Wrapper from '../components/Wrapper/Wrapper'
 import Work from '../components/Work/Work'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 
@@ -30,7 +32,7 @@ async function getData() {
     <>
     <Snack />
     <Hero/>
-    <Brand/>
+    <Brand />
     <About/>
     <Services/>
     <Wrapper/>
