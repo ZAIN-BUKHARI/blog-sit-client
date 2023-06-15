@@ -5,9 +5,9 @@ const About = () => {
         {
           id: 1,
           title: "Who I Am And What I DO",
-          desc1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          desc2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          desc3: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          desc1: "At [Blogger], we are a passionate team of writers, creators, and enthusiasts who love knowledge on a wide range of topics.",
+          desc2: "Our goal is to create a platform that serves hub for insightful and engaging content, informed, entertained, and inspired.",
+          desc3: "Lifestyle: Our lifestyle section encompasses articles on health and wellness, personal development, travel, fashion.",
         },
         
     ]

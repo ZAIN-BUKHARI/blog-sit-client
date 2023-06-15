@@ -20,8 +20,8 @@ const Work = () => {
                             </div>
                             <div className="overlay">
                                 <div className="text">
-                                    <h2>{val.title}</h2>
-                                    <p>{val.desc}</p>
+                                    {/* <h2>{val.title}</h2>
+                                    <p>{val.desc}</p> */}
                                 </div>
                                 <div className="icon">
                                     

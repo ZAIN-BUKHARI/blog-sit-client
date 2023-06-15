@@ -1,7 +1,13 @@
+'use client'
 import React from 'react'
 import ServicesData from '../../ServicesData'
+import { useRouter } from 'next/navigation'
 
 const Service = () => {
+    const router = useRouter('')
+    const link=(slug)=>{
+        router.push(`/blog/${slug}`)
+    }
   return (
     <>
     <section className="services topMargin">
@@ -15,13 +21,14 @@ const Service = () => {
                 {
                     ServicesData.map((val)=>{
                         return (
-                        <><div className="box">
-                            <div className="img">
-                                <img src={val.cover} alt="" />
+                        <>
+                        <div className="box " >
+                            <div className="img point" onClick={()=>{link(val.slug)}}>
+                                <img src={val.img} alt="" />
                             </div>
                             <div className="text">
-                                <h2>{val.title}</h2>
-                                <p>{val.desc}</p>
+                                <h2>{val.author}</h2>
+                                <p>{val.title}</p>
                             </div>
                         </div>
                         </>

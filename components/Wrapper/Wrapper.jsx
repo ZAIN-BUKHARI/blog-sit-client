@@ -7,7 +7,7 @@ const Wrapper = () => {
           id: 1,
           title: "LOOKING FOR EXCLUSIVE SERVICE",
           title2: "Get The Best For Your Business",
-          desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          desc: "Lifestyle: Our lifestyle section encompasses articles on health and wellness, personal development, travel, fashion. ",
          
         }
     ]

@@ -60,7 +60,9 @@
   
 
 
-  
+  .point{
+	cursor: pointer;
+  }
 
   /* NEW UI--------------------------------------------------------- */
 
@@ -565,15 +567,10 @@ footer .icon i{
 }
 
 @media (max-width:768px){
-	p{
+	/* p{
 		font-size:5px
 	}
-	.containersui{
-		/* max-width: 80%; */
-		/* margin: auto; */
-		max-width: 100%;
-		margin: 0px;
-	  }
+	
 	.hero h1{
 		font-size: 10px;
 	}
@@ -582,23 +579,24 @@ footer .icon i{
 		outline: none;
 		border: none;
 		color: #fff;
-		/* font-weight: 600; */
-		/* font-size: 15px; */
 		transition: 0.5s;
 		cursor: pointer;
-	}
+	} */
 	
 	.left,.right{
 		width: 100%;
 
 
 	}
+	.hero h1{
+		font-size: 50px;
+	}
 	.hero .containersui{
 		flex-direction: column;
-		flex-direction: column-reverse;
+		/* flex-direction: column-reverse; */
 	}
 	.hero{
-		height: 134vh;
+		height: 110vh;
 	}
 	.hero .img{
 		width: 100%;
@@ -666,7 +664,7 @@ footer .icon i{
 		grid-row-start: 14;
 		grid-row-end: 17;
 	}
-	.work .box:nth-child(5){
+	.work .box:nth-child(6){
 		grid-column-start:1 ;
 		grid-column-end: 9;
 		grid-row-start: 17;
