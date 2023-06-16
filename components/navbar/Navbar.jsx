@@ -44,11 +44,13 @@ const Navbar = () => {
 
   return (
     <div className='md:mx-auto font-serif md:max-w-[1366px]  md:px-[60px]  md:justify-between md:flex h-[100px]'>
+      <div className="flex justify-center items-center align-middle">
       <Link href="/" className='  md:text-[40px] text-[22px] font-bold '>
         Blog<span className="text-green-400 font-serif" >ger</span>
       </Link>
-      <div className='flex md:text-[22px] text-[15px] items-center mb-[100px] md:mb-[0px] mt-[30px]  justify-stretch mx-10'>
         <DarkModeToggle />
+      </div>
+      <div className='flex md:text-[22px] text-[15px] items-center mb-[100px] md:mb-[0px] mt-[30px]  justify-stretch mx-10'>
         {links.map((link) => (
           <div className=" ">
           <Link key={link.id} href={link.url} className={styles.un}>

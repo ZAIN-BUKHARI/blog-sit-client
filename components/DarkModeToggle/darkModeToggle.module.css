@@ -4,6 +4,7 @@
   border: 1.5px solid #53c28b70;
   border-radius: 30px;
   display: flex;
+  margin: 0 10px;
   align-items: center;
   justify-content: space-between;
   padding: 2px;
@@ -16,8 +17,8 @@
 }
 
 .ball{
-  width: 15px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   background-color: #53c28b;
   border-radius: 50%;
   position: absolute;
