@@ -12,7 +12,7 @@ const Service = () => {
     }
   return (
     <>
-    <section className={`services topMargin ${mode=='dark'?'bg-black':'bg-white'} `}>
+    <section className={`services topMargin ${mode=='dark'?'bg-[#111]':'bg-white'} `}>
         <div className="containersui">
            {animation && <div className="heading" data-aos="zoom-in" data-aos-duration="2000">
                 <h3 >LATEST BLOGS</h3>
