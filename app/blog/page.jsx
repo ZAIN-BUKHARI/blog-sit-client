@@ -1,7 +1,7 @@
 
 import Box from '../../components/Boxblog/Box'
 import React from 'react'
-
+import Services from '../../components/Services/Services'
 async function getData() {
   const res = await fetch("http://localhost:3000/api/blog", {
     cache: "no-store",
@@ -55,7 +55,9 @@ const Blog =async () => {
   ]
   return (
    <>
-   <Box blogs={blogs}/>
+   {/* <Box blogs={blogs}/> */}
+   
+   <Services/>
    </>
   )
 }

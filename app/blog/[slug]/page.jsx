@@ -1,25 +1,24 @@
-
+'use client'
+import React from 'react'
 import Link from "next/link";
 import Container from "../../../slugcomp/container";
-import { notFound } from "next/navigation";
-import React from 'react'
 
-async function getData(slug) {
-  const res = await fetch(`http://localhost:3000/api/slug/${slug}`, {
-    cache: "no-store",
-  });
+   
+// async function getData(slug) {
+//   const res = await fetch(`http://localhost:3000/api/slug/${slug}`, {
+//     cache: "no-store",
+//   });
 
-  if (!res.ok) {
-    return notFound()
-  }
+//   if (!res.ok) {
+//     return notFound()
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
-const Post=async ({params})=> {
-  
-// const data = await getData(params.slug)
-const data=
+const Post=async ()=> {
+  // const data = await getData(params.slug)
+  const data=
   {
     title:"a lifesaver and timesaver indeed. Putting the headers in routes did the trick for me",
     slug:"a lifesaver and timesaver indeed. Putting the headers in routes did the trick for me",
@@ -33,8 +32,8 @@ const data=
     desc2:"Turns out vercel overwrites the cors settings you put anywhere outside the json. It's not possible to mix a headers array and routes array in the same file. But you can just put a header inside the routes. Dont forget the methods, particularly the options, since it apparently converts many requests into an options request.Turns out vercel overwrites the cors settings you put anywhere outside the json. It's not possible to mix a headers array and routes array in the same file. But you can just put a header inside the routes. Dont forget the methods, particularly the options, since it apparently converts many requests into an options request."
   }
   
-
-
+  
+  
   return (
     <>
         <div className="md:mx-auto mx-[10px] max-w-screen-md md:mt-[10px] mt-[20px]  ">
@@ -42,7 +41,7 @@ const data=
             <h2 className="font-serif text-gray-800 text-2xl">{data.category}</h2>
           </div>
 
-          <h1 className="text-black mb-3 mt-2 text-center text-3xl font-semibold tracking-tight  lg:text-4xl lg:leading-snug">
+          <h1 className={`text-black  mb-3 mt-2 text-center text-3xl font-semibold tracking-tight  lg:text-4xl lg:leading-snug`}>
             {data.title}
           </h1>
 
@@ -53,7 +52,7 @@ const data=
                     <img
                     src={data.img}
                       className="rounded-full h-9 w-[40px]  object-cover"
-                      fill
+                      // fill
                       // sizes="40px"
                     />
                   </Link>
