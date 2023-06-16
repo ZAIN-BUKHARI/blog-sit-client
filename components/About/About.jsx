@@ -1,6 +1,9 @@
-import React from 'react'
+'use client'
+import React,{useContext} from 'react'
 import Link from 'next/link'
+import { ThemeContext } from '../../context/ThemeContext';
 const About = () => {
+  const {animation} = useContext(ThemeContext)
     const Data = [
         {
           id: 1,
@@ -13,18 +16,24 @@ const About = () => {
     ]
   return (
     <>
+    {/* data-aos="fade-left" data-aos-duration="2000" */}
     <section className="about topMargin">
         <div className="containersui flex">
         {Data.map((value)=>{
         return (
         <><div className="left mtop">
         <div className="heading">
-            <h3>About Me</h3>
-            <h1>{value.title}</h1>
+        {animation && <h3 data-aos="fade-down"  data-aos-duration="500">About Me</h3>}
+        {!animation && <h3>About Me</h3>}
+           {animation && <h1 data-aos="fade-down" data-aos-duration="1000">{value.title}</h1>}
+           {!animation && <h1 >{value.title}</h1>}
         </div>
-         <p >{value.desc1}</p>
-         <p >{value.desc2}</p>
-         <p >{value.desc3}</p>
+        {animation && <p data-aos="fade-down" data-aos-duration="5000" >{value.desc3}</p>}
+        {animation && <p data-aos="fade-down" data-aos-duration="4000" >{value.desc2}</p>}
+        {animation && <p data-aos="fade-down" data-aos-duration="2000" >{value.desc1}</p>}
+        {!animation && <p>{value.desc1}</p>}
+        {!animation && <p>{value.desc2}</p>}
+        {!animation && <p>{value.desc3}</p>}
          <Link href={'/about'}><button className="primary-btn">
             See more
          </button></Link>

@@ -48,7 +48,7 @@ const Navbar = () => {
         Blog<span className="text-green-400 font-serif" >ger</span>
       </Link>
       <div className='flex md:text-[22px] text-[15px] items-center mb-[100px] md:mb-[0px] mt-[30px]  justify-stretch mx-10'>
-        {/* <DarkModeToggle /> */}
+        <DarkModeToggle />
         {links.map((link) => (
           <div className=" ">
           <Link key={link.id} href={link.url} className={styles.un}>

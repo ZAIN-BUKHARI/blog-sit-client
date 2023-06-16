@@ -24,7 +24,7 @@
 	color: inherit;
   } */
   
-  /* .theme{
+   .theme{
 	transition: 1s all ease;
   }
   
@@ -36,7 +36,7 @@
   .dark {
 	background-color: #111;
 	color: #bbb;
-  } */
+  } 
   
   /* .containersui {
 	max-width: 1366px;
@@ -339,7 +339,7 @@ h3{
 
 .services{
 	text-align: center;
-	background-color: #fff;
+	/* background-color: #fff; */
 	padding: 50px 0;
 }
 .services .box{
